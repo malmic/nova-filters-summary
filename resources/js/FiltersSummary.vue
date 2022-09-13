@@ -109,6 +109,11 @@ export default {
                         filter.summary = filter.options
                             .find(o => this.nin(o.value) === this.nin(filter.currentValue))?.name
                     }
+                    
+                    else if (filter.component === 'awesome-nova-dependent-filter') {
+                        filter.summary = filter.options
+                            .find(o => this.nin(o.value) === this.nin(filter.currentValue))?.name
+                    }
 
                     else if (filter.component === 'boolean-filter') {
                         const enabledValues = []
